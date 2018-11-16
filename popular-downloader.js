@@ -2,8 +2,6 @@ const rp = require('request-promise');
 const path = require('path');
 const fs = require('fs');
 
-let downloadPath = path.join(__dirname, './popular-articles.json');
-
 rp('https://reddit.com/r/popular.json')
   .then(res => {
     JSON.parse(res).data.children.forEach(item => {
@@ -15,5 +13,4 @@ rp('https://reddit.com/r/popular.json')
         fs.writeFile(`./downloads/${item.data.title}`, item.data.url);
       }
     })
-    fs.writeFileSync(downloadPath, res);
   })
