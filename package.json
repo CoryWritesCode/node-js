@@ -1,11 +1,16 @@
 {
   "name": "chirper-pt-two",
   "version": "1.0.0",
-  "description": "",
+  "description": "Learning and practicing to use NodeJSs",
+  "repository": {"url": "https://github.com/CoryWritesCode/node-js.git"},
   "main": "server/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Cory Cunningham",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
+  }
 }
